@@ -1,0 +1,50 @@
+/* 1. These circles should have a color (`fill`) of `#5f5f5f` */
+svg > circle {
+    fill:#5f5f5f;
+}
+
+/* 2. These paths should have a `stroke` of `#5f5f5f` and 
+     a `stroke-width` of 8px */
+svg path {
+    stroke: #5f5f5f;
+    stroke-width: 8px;
+}
+
+/* 3. These circles should be colored white */
+circle.small {
+    fill: white;
+}
+
+/* 4. These circles should be colored `#573d29` */
+.contained circle.small {
+    fill: #573d29;
+}  
+
+/* 8. These rectangles should have an `opacity` of 0 Note that you'll need to modify a previous rule so that the previous rectangle in the "contained" group remains opaque  (has an `opacity` of 1) */
+rect {
+    opacity: 0;
+}
+
+/* 5. The circle and rectangle in this group should be colored `#c0c0c0` and have a stroke of `none` Use a single rule (with the group selector) */
+.contained circle, .contained rect {
+    fill: #c0c0c0;
+    stroke: none;
+    opacity: 1;
+}
+
+/*6. This path should also be filled with a color `#c0c0c0`, but have a stroke colored `#bd250d` with a width of 4px */
+#interactive {
+    fill: #c0c0c0;
+    stroke: #bd250d;
+    stroke-width: 4px;
+}
+
+/* 7. In addition, when you `hover` over this path, its fill should also become `#bd250d`. */
+#interactive:hover {
+    fill: #bd250d;
+}
+
+/* 9. Finally, this path should have no stroke. Hint: consider using a pseudo-class */
+svg path:last-of-type {
+    stroke: none;
+}

@@ -1,4 +1,73 @@
-body {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+/* Step 1 */ 
+* {
+  box-sizing: border-box;
+}
+
+main > div {
+  display: flex;
+  height: 100%;
+}
+
+section {
+  padding: 1em;
+}
+
+section:first-of-type {
+  flex: 0 0 240px;
+  flex-basis: 240px;
+}
+
+section:nth-of-type(2) {
+  flex: 1;
+  background-color: #eee;
+}
+
+section:last-of-type {
+  flex-basis: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Step 2 */ 
+section:nth-of-type(2) div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: 0.5rem;
+  /* Part of step 3 */ 
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+/* Step 3 */ 
+.card p {
+  padding: 0.5rem 1rem;
   margin: 0;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+/* Step 4 */ 
+main {
+  flex: 1;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
